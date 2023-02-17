@@ -1,9 +1,19 @@
 const express = require('express')
+//const { allowedNodeEnvironmentFlags } = require('process')
 const app = express()
+
+//set view engine to ejs:
+app.set('view engine', 'ejs')
 
 //adding endpoints
 app.get('/', (req, res) => {
-    res.send('Hello')
+    const templateVars = {
+        name: 'Balwant',
+        age: 42,
+        birthDate: '22nd June'
+    }
+    res.render('user-profile', templateVars)
+    //    res.send('Hello')
 })
 
 app.get('/about', (req, res) => {
