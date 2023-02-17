@@ -2,7 +2,8 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: whitesmoke;
+    background: red;
+    /* background: whitesmoke; */
     font-family: sans-serif;
 }
 
